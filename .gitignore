@@ -1,0 +1,161 @@
+# Esta es la versión recomendada para proyectos Unity.
+# Basada en https://github.com/github/gitignore/blob/main/Unity.gitignore
+
+# Unidades de medios generadas por Unity
+[Dd]ebug/
+[Dd]ebugPublic/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Archivos de caché de memoria
+*.pidb.meta
+*.pidb
+*.userprefs
+*.csproj
+*.pidb
+*.unityproj
+*.booproj
+*.sln
+*.suo
+*.user
+*.tmp
+*.tmp.*
+*.cache
+*.vs/
+*.vscode/
+*.code-workspace
+
+# Archivos de configuración de proyecto y editor
+[Bb]in/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Archivos creados por Unity
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# Archivos específicos de plugins nativos
+*.dll
+*.dll.meta
+*.so
+*.so.meta
+*.a
+*.a.meta
+
+# Archivos generados por el proceso de compilación
+*.unitypackage
+*.apk
+*.aab
+*.app
+*.exe
+*.exe.meta
+*.pdb
+*.pdb.meta
+*.exp
+*.exp.meta
+*.ilk
+*.ilk.meta
+*.lib
+*.lib.meta
+
+# Archivos de Visual Studio
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.userprefs
+*.metaproj
+*.metaproj.tmp
+*.cache
+*.pidb.meta
+*.pdb
+
+# Archivos específicos de Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+*.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.lnk
+*.tmp
+
+# Archivos de MonoDevelop / JetBrains Rider
+*.userprefs
+*.csproj.user
+*.sln.user
+*.unityproj.user
+*.pidb.user
+.idea/
+*.sln.ide/
+
+# Archivos de caché de Unity y Asset Store
+[Ll]ibrary/[Aa]sset/[Ii]mport/[Aa]sset/[Cc]ache/
+[Ll]ibrary/[Aa]sset/[Tt]emp/
+[Ll]ibrary/[Aa]sset/[Ee]xport/
+[Ll]ibrary/[Aa]sset/[Uu]nity[Cc]ache/
+[Ll]ibrary/[Aa]sset/[Pp]review[Cc]ache/
+[Ll]ibrary/[Cc]ache/
+[Ll]ibrary/[Pp]ackage[Cc]ache/
+[Pp]ackages/[Pp]ackage[Cc]ache/
+
+# Archivos de análisis de código
+[Ll]ibrary/[Ss]cript[Aa]ssembly[Dd]ebug/
+[Ll]ibrary/[Aa]nalytics/
+
+# Archivos de WebGL
+[Bb]uild/[Ww]ebGL/
+[Bb]uild/[Ww]ebGL/[Bb]uild/
+[Bb]uild/[Ww]ebGL/[Tt]emplateData/
+
+# Archivos de Android
+[Pp]roject/[Ss]ettings/[Aa]ndroid[Aa]pp[Kk]ey.keystore
+[Pp]roject/[Ss]ettings/[Aa]ndroid[Aa]pp[Kk]ey.keystore.meta
+
+# Archivos de iOS
+[Bb]uild/[Ii]os/
+[Bb]uild/[Ii]os/[Dd]ata/
+[Bb]uild/[Ii]os/[Ll]ibraries/
+[Bb]uild/[Ii]os/[Pp]roject/[Pp]roject.pbxproj
+[Bb]uild/[Ii]os/[Pp]roject/[Pp]roject.xcworkspace/
+[Bb]uild/[Ii]os/[Pp]roject/[Xx]code[Pp]roject/
+[Bb]uild/[Ii]os/[Pp]roject/[Pp]ods/
+
+# Archivos de Linux
+[Bb]uild/[Ll]inux/
+[Bb]uild/[Ll]inux/[Pp]layer/
+
+# Archivos de Windows
+[Bb]uild/[Ww]indows/
+[Bb]uild/[Ww]indows/[Pp]layer/
+
+# Archivos de consolas (Nintendo, PlayStation, Xbox, etc.)
+[Bb]uild/[Nn]intendo/
+[Bb]uild/[Pp]lay[Ss]tation/
+[Bb]uild/[Xx]box/
+
+# Archivos de AssetBundles
+[Aa]sset[Bb]undles/
+[Aa]sset[Bb]undles.[Cc]ache/
+[Aa]sset[Bb]undle[Gg]raph/
