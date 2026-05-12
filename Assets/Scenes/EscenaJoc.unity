@@ -574,6 +574,24 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &768253517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2819381668576665501, guid: 2fda13a2f2135c84ab8ba568d7fa4f65, type: 3}
+  m_PrefabInstance: {fileID: 2059964266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &768253524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768253517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9111e042e9c6ab446a4fa2be2e8c6318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GeneradorProjectils
+  _ProjectilPrefab: {fileID: 343622779931958711, guid: 8d602820b7f257d4a93ee9306c0ff6ce, type: 3}
 --- !u!1 &980132918
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +884,7 @@ GameObject:
   - component: {fileID: 1151688220}
   - component: {fileID: 1151688222}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: TextPunts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1390,7 +1408,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2819381668576665501, guid: 2fda13a2f2135c84ab8ba568d7fa4f65, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 768253524}
   m_SourcePrefab: {fileID: 100100000, guid: 2fda13a2f2135c84ab8ba568d7fa4f65, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
