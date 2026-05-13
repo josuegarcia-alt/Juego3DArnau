@@ -7,6 +7,9 @@ public class NauJugador : MonoBehaviour
     public GameObject _ExplosioPrefab;
     public GameManager _gameManager;
 
+    // Evita que rebi múltiples impactes seguits
+    private bool _invencible = false;
+
     void Start()
     {
         _vel = 8f;
@@ -41,26 +44,40 @@ public class NauJugador : MonoBehaviour
         transform.position = posNau;
     }
 
-    private void OnTriggerEnter(Collider objecteTocat)
+    public void RebreImpacte()
     {
-        if (objecteTocat.tag == "Enemic" || objecteTocat.tag == "ProjectilEnemic")
+        // Si ja és invencible ignora l'impacte
+        if (_invencible) return;
+
+        _invencible = true;
+        Invoke("DesactivarInvencibilitat", 0.5f);
+
+        if (_ExplosioPrefab != null)
         {
             GameObject explosio = Instantiate(_ExplosioPrefab);
             explosio.transform.position = transform.position;
+        }
 
-            ValorsGlobals.videsJugador--;
+        ValorsGlobals.videsJugador--;
 
-            GameObject textVides = GameObject.Find("LivesText");
-            if (textVides != null)
-            {
-                TextVidesJugador tvj = textVides.GetComponent<TextVidesJugador>();
-                if (tvj != null) tvj.ActualitzarVides();
-            }
+        GameObject textVides = GameObject.Find("LivesText");
+        if (textVides != null)
+        {
+            TextVidesJugador tvj = textVides.GetComponent<TextVidesJugador>();
+            if (tvj != null) tvj.ActualitzarVides();
+        }
 
-            if (ValorsGlobals.videsJugador <= 0)
-            {
-                SceneManager.LoadScene("EscenaResultats");
-            }
+        if (ValorsGlobals.videsJugador <= 0)
+        {
+            SceneManager.LoadScene("EscenaResultat");
         }
     }
+
+    private void DesactivarInvencibilitat()
+    {
+        _invencible = false;
+    }
+
+    // NauJugador NO gestiona col·lisions aquí
+    // Els projectils i enemics criden RebreImpacte() directament
 }

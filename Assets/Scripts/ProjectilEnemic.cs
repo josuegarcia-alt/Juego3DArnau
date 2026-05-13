@@ -5,6 +5,7 @@ public class ProjectilEnemic : MonoBehaviour
     private float _vel;
     private bool _continuaUltimaDireccio;
     private Vector3 _direccioJugador;
+    private bool _potCollidir = false;
 
     void Start()
     {
@@ -12,15 +13,17 @@ public class ProjectilEnemic : MonoBehaviour
         _continuaUltimaDireccio = false;
         _direccioJugador = Vector3.down;
         Invoke("ContinuaUltimaDireccio", 1.5f);
+        // Espera 0.1s abans d'activar col·lisions per evitar xoc amb la nau que el crea
+        Invoke("ActivarCollidir", 0.1f);
     }
 
     void Update()
     {
-        if (GameObject.FindWithTag("NauJugador") != null)
+        if (GameObject.FindWithTag("Jugador") != null)
         {
             if (!_continuaUltimaDireccio)
             {
-                GameObject nauJugador = GameObject.FindWithTag("NauJugador");
+                GameObject nauJugador = GameObject.FindWithTag("Jugador");
                 _direccioJugador = (nauJugador.transform.position - transform.position).normalized;
                 _direccioJugador.z = 0f;
             }
@@ -38,6 +41,9 @@ public class ProjectilEnemic : MonoBehaviour
         }
     }
 
+    private void ActivarCollidir() { _potCollidir = true; }
+    private void ContinuaUltimaDireccio() { _continuaUltimaDireccio = true; }
+
     private void ComprovarDinsPantalla()
     {
         float camDist = Mathf.Abs(Camera.main.transform.position.z);
@@ -48,11 +54,15 @@ public class ProjectilEnemic : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void ContinuaUltimaDireccio() { _continuaUltimaDireccio = true; }
-
     private void OnTriggerEnter(Collider objecteTocat)
     {
-        if (objecteTocat.tag == "NauJugador")
+        if (!_potCollidir) return;
+
+        if (objecteTocat.tag == "Jugador")
+        {
+            NauJugador nau = objecteTocat.GetComponent<NauJugador>();
+            if (nau != null) nau.RebreImpacte();
             Destroy(gameObject);
+        }
     }
 }

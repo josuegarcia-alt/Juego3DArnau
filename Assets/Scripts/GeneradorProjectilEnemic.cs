@@ -3,18 +3,21 @@ using UnityEngine;
 public class GeneradorProjectilEnemic : MonoBehaviour
 {
     public GameObject _ProjectilEnemicPrefab;
+    private float _intervalDispar = 2f;
 
     void Start()
     {
-        Invoke("CreaProjectil", 0.75f);
+        // Petit delay aleatori perque no tots disparin alhora
+        float delay = Random.Range(0.5f, 2f);
+        InvokeRepeating("Disparar", delay, _intervalDispar);
     }
 
-    private void CreaProjectil()
+    private void Disparar()
     {
-        if (GameObject.FindWithTag("NauJugador") != null)
-        {
-            GameObject projectil = Instantiate(_ProjectilEnemicPrefab);
-            projectil.transform.position = transform.position;
-        }
+        if (_ProjectilEnemicPrefab == null) return;
+        if (GameObject.FindWithTag("Jugador") == null) return;
+
+        GameObject projectil = Instantiate(_ProjectilEnemicPrefab);
+        projectil.transform.position = transform.position;
     }
 }

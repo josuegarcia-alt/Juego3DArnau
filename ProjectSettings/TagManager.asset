@@ -19,11 +19,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Jugador
+  - EnemicLayer
+  - ProjectilJugador
+  - ProjectilEnemic
+  - Explosio
   - 
   - 
   - 

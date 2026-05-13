@@ -19,7 +19,7 @@ public class ObjecVida : MonoBehaviour
 
     private void OnTriggerEnter(Collider objecteTocat)
     {
-        if (objecteTocat.tag == "NauJugador")
+        if (objecteTocat.tag == "Jugador")
         {
             ValorsGlobals.videsJugador++;
             ValorsGlobals.videsAgafades++;

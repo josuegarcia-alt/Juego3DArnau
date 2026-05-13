@@ -1335,9 +1335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930a5f1fc4127ea4dafa444bfcdfcec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeneradorEnemics
-  _NauEnemicPrefab: {fileID: 0}
-  _NauEnemicEspecialPrefab: {fileID: 0}
-  _ObjecVidaPrefab: {fileID: 0}
+  _NauEnemicPrefab: {fileID: 6762945164154496628, guid: c91f075c417215d4f9d7892af4b67a73, type: 3}
+  _NauEnemicEspecialPrefab: {fileID: 2645055225716155202, guid: 46c113622906fdc46bde0f5da808f49f, type: 3}
+  _ObjecVidaPrefab: {fileID: 8677877332794397533, guid: 03b912ab34d28ae4eb20fde6e62faa48, type: 3}
 --- !u!4 &1973910688
 Transform:
   m_ObjectHideFlags: 0

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5762399979948326520}
   - component: {fileID: 9009553829365393613}
   - component: {fileID: 3324006889930633061}
-  - component: {fileID: 1015649271091223919}
-  m_Layer: 0
+  - component: {fileID: -8672361974383114295}
+  - component: {fileID: -2228688764277748272}
+  m_Layer: 7
   m_Name: NauEnemic
   m_TagString: Enemic
   m_Icon: {fileID: 0}
@@ -90,7 +91,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 787c18a87669cae4daad7a2be823f53b, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,7 +141,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &1015649271091223919
+--- !u!114 &-8672361974383114295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,3 +154,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NauEnemic
   _ExplosioPrefab: {fileID: 8888394437106374206, guid: f3d2e842640c67949b37d1a1b32fa162, type: 3}
+--- !u!114 &-2228688764277748272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762945164154496628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4425c4803f970434485767c518e156a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GeneradorProjectilEnemic
+  _ProjectilEnemicPrefab: {fileID: 4238936161310294029, guid: 584e5444ff001bf48bcf05848cbf7ca9, type: 3}

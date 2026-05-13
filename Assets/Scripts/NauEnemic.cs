@@ -20,15 +20,32 @@ public class NauEnemic : MonoBehaviour
 
     private void OnTriggerEnter(Collider objecteTocat)
     {
-        if (objecteTocat.tag == "ProjectilJugador" || objecteTocat.tag == "NauJugador")
+        // Colpejat per projectil del jugador
+        if (objecteTocat.tag == "ProjectilJugador")
+        {
+            Explotar();
+            GameObject tp = GameObject.Find("TextPunts");
+            if (tp != null)
+                tp.GetComponent<TextPuntsJugador>().setPuntsJugador(200);
+            Destroy(gameObject);
+        }
+
+        // Xoc directe amb el jugador
+        if (objecteTocat.tag == "Jugador")
+        {
+            NauJugador nau = objecteTocat.GetComponent<NauJugador>();
+            if (nau != null) nau.RebreImpacte();
+            Explotar();
+            Destroy(gameObject);
+        }
+    }
+
+    private void Explotar()
+    {
+        if (_ExplosioPrefab != null)
         {
             GameObject explosio = Instantiate(_ExplosioPrefab);
             explosio.transform.position = transform.position;
-
-            int puntsEnemic = 200;
-            GameObject.Find("TextPunts").GetComponent<TextPuntsJugador>().setPuntsJugador(puntsEnemic);
-
-            Destroy(gameObject);
         }
     }
 }

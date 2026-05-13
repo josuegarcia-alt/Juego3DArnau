@@ -3,6 +3,12 @@ using UnityEngine;
 public class ProjectilEnemicEspecial : MonoBehaviour
 {
     private float _vel = 5f;
+    private bool _potCollidir = false;
+
+    void Start()
+    {
+        Invoke("ActivarCollidir", 0.1f);
+    }
 
     void Update()
     {
@@ -17,9 +23,17 @@ public class ProjectilEnemicEspecial : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void ActivarCollidir() { _potCollidir = true; }
+
     private void OnTriggerEnter(Collider objecteTocat)
     {
-        if (objecteTocat.tag == "NauJugador")
+        if (!_potCollidir) return;
+
+        if (objecteTocat.tag == "Jugador")
+        {
+            NauJugador nau = objecteTocat.GetComponent<NauJugador>();
+            if (nau != null) nau.RebreImpacte();
             Destroy(gameObject);
+        }
     }
 }

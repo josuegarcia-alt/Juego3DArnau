@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7227615308950218245}
   - component: {fileID: 4279886871261518254}
   - component: {fileID: 688205715819853641}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Explosio
   m_TagString: Untagged
   m_Icon: {fileID: 0}

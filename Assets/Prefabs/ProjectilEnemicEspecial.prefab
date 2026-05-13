@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3067103360698193426}
   - component: {fileID: 8415400371752898073}
   - component: {fileID: 570211102651100947}
-  - component: {fileID: 3810499815533557927}
-  m_Layer: 0
+  - component: {fileID: -1781254057763639130}
+  m_Layer: 9
   m_Name: ProjectilEnemicEspecial
   m_TagString: ProjectilEnemicEspecial
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &3810499815533557927
+--- !u!114 &-1781254057763639130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
